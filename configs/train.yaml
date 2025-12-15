@@ -1,0 +1,20 @@
+seed: 42
+
+data:
+  train_csv: data/train.csv
+
+model:
+  model_name: microsoft/graphcodebert-base
+  num_labels: 2
+  max_length: 256
+
+training:
+  batch_size: 4
+  lr: 2.0e-5
+  epochs: 1
+
+assets:
+  # Paths to save each trained model. Multiple entries enable an ensemble.
+  model_paths:
+    - assets/model1.pt
+    - assets/model2.pt

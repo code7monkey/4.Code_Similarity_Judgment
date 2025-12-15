@@ -1,0 +1,19 @@
+seed: 42
+
+data:
+  test_csv: data/test.csv
+  sample_submission_csv: data/sample_submission.csv
+
+model:
+  model_name: microsoft/graphcodebert-base
+  num_labels: 2
+  max_length: 256
+
+inference:
+  batch_size: 4
+
+assets:
+  model_paths:
+    - assets/model1.pt
+    - assets/model2.pt
+  output_path: submission.csv
